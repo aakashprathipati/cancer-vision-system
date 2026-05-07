@@ -7,7 +7,7 @@ An advanced, full-stack medical application for the AI-assisted detection and an
 - **Three-Panel Diagnostic Interface**: 
   - **Image Viewer**: Displays the medical imagery for examination.
   - **Diagnostic Report**: Shows detailed metrics and analysis results.
-  - **AI Live Summary**: Uses Gemini Vision API to generate real-time clinical insights and highlights.
+  - **AI Live Summary**: Uses advanced Vision APIs (e.g. Groq / Llama) to generate real-time clinical insights and highlights.
 - **Deep Learning AI Engine**: 
   - Multi-class cancer detection trained on real medical datasets.
   - Advanced CNN architectures with custom loss functions and preprocessing.
@@ -64,9 +64,17 @@ docker-compose up --build
 2. Install dependencies: `npm install`
 3. Start the development server: `npm run dev`
 
+#### Environment Variables
+
+Create a `.env` file in the `frontend/` directory with the following structure:
+
+```env
+VITE_GROQ_API_KEY=your_groq_api_key_here
+```
+
 ## AI Engine
 
-The system uses a custom deep learning pipeline (`backend/ai_engine/`) to process real diagnostic datasets. The `train.py` script facilitates the training of models on multi-class datasets. Inference is integrated into the Django views to provide real-time diagnostic metrics alongside the Gemini API insights.
+The system uses a custom deep learning pipeline (`backend/ai_engine/`) to process real diagnostic datasets. The `train.py` script facilitates the training of models on multi-class datasets. Inference is integrated into the Django views to provide real-time diagnostic metrics alongside the LLM Vision API insights.
 
 ## License
 
